@@ -16,8 +16,8 @@ async def start(client, message):
         text=Script.START_MSG.format(message.from_user.mention),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup([[
-            InlineKeyboardButton("HELP", callback_data="help_data"),
-            InlineKeyboardButton("ABOUT", callback_data="about_data"),
+            InlineKeyboardButton("💡 𝐁𝐚𝐧𝐭𝐮𝐚𝐧", callback_data="help_data"),
+            InlineKeyboardButton("𝐓𝐞𝐧𝐭𝐚𝐧𝐠 🤖", callback_data="about_data"),
         ]]),
         reply_to_message_id=message.id)
 
@@ -28,8 +28,8 @@ async def help(client, message):
         text=Script.HELP_MSG,
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup([[
-            InlineKeyboardButton("BACK", callback_data="start_data"),
-            InlineKeyboardButton("ABOUT", callback_data="about_data"),
+            InlineKeyboardButton("≪ 𝕂𝕖𝕞𝕓𝕒𝕝𝕚", callback_data="start_data"),
+            InlineKeyboardButton("𝐓𝐞𝐧𝐭𝐚𝐧𝐠 🤖", callback_data="about_data"),
         ]]),
         reply_to_message_id=message.id)
 
@@ -40,7 +40,7 @@ async def about(client, message):
         text=Script.ABOUT_MSG,
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup([[
-            InlineKeyboardButton("BACK", callback_data="help_data"),
-            InlineKeyboardButton("START", callback_data="start_data"),
+            InlineKeyboardButton("≪ 𝕂𝕖𝕞𝕓𝕒𝕝𝕚", callback_data="help_data"),
+            InlineKeyboardButton("𝕊𝕥𝕒𝕣𝕥", callback_data="start_data"),
         ]]),
         reply_to_message_id=message.id)
