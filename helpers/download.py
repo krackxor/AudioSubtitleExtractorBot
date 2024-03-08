@@ -16,14 +16,14 @@ DATA = {}
 async def download_file(client, message):
     media = message.reply_to_message
     if media.empty:
-        await message.reply_text('Why did you delete that?? 😕', True)
+        await message.reply_text('𝑴𝒆𝒏𝒈𝒂𝒑𝒂 𝒌𝒂𝒎𝒖 𝒎𝒆𝒏𝒈𝒉𝒂𝒑𝒖𝒔 𝒊𝒕𝒖?', True)
         return
 
     msg = await client.send_message(
         chat_id=message.chat.id,
-        text="**Downloading your file to server...**",
+        text="**Mengunduh berkas Anda ke server....**",
         reply_markup=InlineKeyboardMarkup([[
-            InlineKeyboardButton(text="Check Progress",
+            InlineKeyboardButton(text="Periksa Progres",
                                  callback_data="progress_msg")
         ]]),
         reply_to_message_id=media.id)
@@ -34,9 +34,9 @@ async def download_file(client, message):
     download_location = await client.download_media(
         message=media,
         progress=progress_func,
-        progress_args=("**Downloading your file to server...**", msg, c_time))
+        progress_args=("**Mengunduh berkas Anda ke server...**", msg, c_time))
 
-    await msg.edit_text("Processing your file....")
+    await msg.edit_text("Sedang memproses berkas Anda...")
 
     output = await execute(
         f"ffprobe -hide_banner -show_streams -print_format json '{download_location}'"
@@ -44,7 +44,7 @@ async def download_file(client, message):
 
     if not output:
         await clean_up(download_location)
-        await msg.edit_text("Some Error Occured while Fetching Details...")
+        await msg.edit_text("Terjadi kesalahan saat mengambil detail....")
         return
 
     details = json.loads(output[0])
@@ -78,11 +78,11 @@ async def download_file(client, message):
         ])
 
     buttons.append([
-        InlineKeyboardButton("CANCEL",
+        InlineKeyboardButton("𝔹𝕒𝕥𝕒𝕝",
                              f"cancel_{mapping}_{message.chat.id}-{msg.id}")
     ])
 
-    await msg.edit_text("**Select the Stream to be Extracted...**",
+    await msg.edit_text("**Pilih aliran yang akan diekstrak...**",
                         reply_markup=InlineKeyboardMarkup(buttons))
 
 
@@ -103,7 +103,7 @@ async def download_url_link(client, message):
 
     msg = await client.send_message(
         chat_id=m.chat.id,
-        text="**Downloading your Link to Server...**",
+        text="**Mengunduh tautan Anda ke Server...**",
         reply_to_message_id=m.id)
 
     start = time.time()
@@ -112,7 +112,7 @@ async def download_url_link(client, message):
                                                 client)
     except Exception as e:
         print(e)
-        await msg.edit(f"**Download Failed** :\n\n{e}")
+        await msg.edit(f"**Pengunduhan Gagal** :\n\n{e}")
         await clean_up(download_location)
         return
 
@@ -122,7 +122,7 @@ async def download_url_link(client, message):
 
     if not output:
         await clean_up(download_location)
-        await msg.edit_text("Some Error Occured while Fetching Details...")
+        await msg.edit_text("Terjadi Kesalahan saat Mengambil Detail...")
         return
 
     details = json.loads(output[0])
@@ -156,9 +156,9 @@ async def download_url_link(client, message):
         ])
 
     buttons.append([
-        InlineKeyboardButton("CANCEL",
+        InlineKeyboardButton("𝔹𝕒𝕥𝕒𝕝",
                              f"cancel_{mapping}_{m.chat.id}-{msg.id}")
     ])
 
-    await msg.edit_text("**Select the Stream to be Extracted...**",
+    await msg.edit_text("**Pilih Aliran yang Akan Diekstrak...**",
                         reply_markup=InlineKeyboardMarkup(buttons))
