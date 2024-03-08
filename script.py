@@ -5,33 +5,33 @@
 
 class Script(object):
 
-    START_MSG = """<b>Hello {},
+    START_MSG = """<b>Halo {},
 
-I can extract audio and subtitles from everything !
+Saya bisa mengambil audio dan subtitle dari segala sesuatu!
 
-Send me any video/audio file and extract what you want :).
+Kirimkan saya file video/audio apapun dan ekstrak apa yang Anda inginkan :).
 
-See <i>help</i> for more details.
+Lihat <i>bantuan</i> untuk lebih jelasnya.
 
-© @YasirPediaChannel</b>"""
+© @Killowan</b>"""
 
-    HELP_MSG = """<b>Hai, Follow these Steps..</b>
+    HELP_MSG = """<b>Hai, Ikuti langkah-langkah ini..</b>
 
-🌀 <i>Send me any Valid video/audio file.</i>
+🌀 <i>Kirimkan saya file video/audio yang valid.</i>
 
-🌀 <i>Click Download and Process button to download the file to my server</i>
+🌀 <i>Klik tombol Unduh dan Proses untuk mengunduh file ke server saya</i>
 
-🌀 <i>Wait till I process the video!</i>
+🌀 <i>Tunggu sampai saya memproses video!</i>
 
-🌀 <i>Now select the stream you need to extract!</i>
+🌀 <i>Sekarang pilih aliran yang Anda butuhkan untuk diekstrak!</i>
 
-<b>© @YasirPediaChannel</b>"""
+<b>© @Killowan</b>"""
 
-    ABOUT_MSG = """⭕️<b>My Name : Streams Trimmer and Extractor Bot</b>
+    ABOUT_MSG = """⭕️<b>Nama Saya : Bot Pemangkas dan Pengambil Aliran</b>
 
-⭕️<b>Creater :</b> @YasirArisM    
+⭕️<b>Pemilik :</b> @Killowan    
 
-⭕️<b>Language :</b> <code>Python3</code>
+⭕️<b>Bahasa :</b> <code>Python3</code>
 
 ⭕️<b>Library :</b> <a href='https://docs.pyrogram.org/'>Pyrogram v2.0.35</a> 
 
