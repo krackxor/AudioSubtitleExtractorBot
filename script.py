@@ -9,7 +9,7 @@ class Script(object):
 
 Saya bisa mengambil audio dan subtitle dari segala sesuatu!
 
-Kirimkan saya file video/audio apapun dan ekstrak apa yang Anda inginkan :).
+Kirimkan saya file/link video/audio apapun dan ekstrak apa yang Anda inginkan :).
 
 Lihat <i>bantuan</i> untuk lebih jelasnya.
 
@@ -17,7 +17,7 @@ Lihat <i>bantuan</i> untuk lebih jelasnya.
 
     HELP_MSG = """<b>Hai, Ikuti langkah-langkah ini..</b>
 
-🌀 <i>Kirimkan saya file video/audio yang valid.</i>
+🌀 <i>Kirimkan saya file/link video/audio yang valid.</i>
 
 🌀 <i>Klik tombol Unduh dan Proses untuk mengunduh file ke server saya</i>
 
