@@ -17,12 +17,12 @@ async def confirm_dwnld(client, message):
 
     if filetype.mime_type.startswith("video/"):
         await message.reply_text(
-            "**What you want me to do??**",
+            "**𝘼𝙥𝙖𝙠𝙖𝙝 𝙖𝙙𝙖 𝙮𝙖𝙣𝙜 𝙗𝙞𝙨𝙖 𝙨𝙖𝙮𝙖 𝙗𝙖𝙣𝙩𝙪?**",
             quote=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton(text="DOWNLOAD and PROCESS",
+                InlineKeyboardButton(text="𝐔𝐧𝐝𝐮𝐡 𝐝𝐚𝐧 𝐏𝐫𝐨𝐬𝐞𝐬",
                                      callback_data="download_file")
-            ], [InlineKeyboardButton(text="CANCEL", callback_data="close")]]))
+            ], [InlineKeyboardButton(text="𝔹𝕒𝕥𝕒𝕝", callback_data="close")]]))
     else:
         await message.reply_text("Invalid Media", quote=True)
 
@@ -33,9 +33,9 @@ async def link_dwnld(client, message):
     if not message.media:
         #link = message.text
         await message.reply_text(
-            "**What you want me to do??**",
+            "**𝘼𝙥𝙖𝙠𝙖𝙝 𝙖𝙙𝙖 𝙮𝙖𝙣𝙜 𝙗𝙞𝙨𝙖 𝙨𝙖𝙮𝙖 𝙗𝙖𝙣𝙩𝙪?**",
             quote=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton(text="DOWNLOAD From Link",
+                InlineKeyboardButton(text="𝐔𝐧𝐝𝐮𝐡 𝐝𝐚𝐫𝐢 𝐓𝐚𝐮𝐭𝐚𝐧",
                                      callback_data="download_url")
-            ], [InlineKeyboardButton(text="CANCEL", callback_data="close")]]))
+            ], [InlineKeyboardButton(text="𝔹𝕒𝕥𝕒𝕝", callback_data="close")]]))
