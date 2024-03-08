@@ -15,10 +15,10 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 async def upload_audio(client, message, file_loc):
 
-    msg = await message.edit_text(text="**Uploading extracted stream...**",
+    msg = await message.edit_text(text="**Mengunggah aliran yang diekstrak...**",
                                   reply_markup=InlineKeyboardMarkup([[
                                       InlineKeyboardButton(
-                                          text="Progress",
+                                          text="Progres",
                                           callback_data="progress_msg")
                                   ]]))
 
@@ -53,15 +53,15 @@ async def upload_audio(client, message, file_loc):
             audio=file_loc,
             file_name=str(fn),
             thumb=thumb,
-            caption=f"`{fn}` [{size}]\n\n<b>Bot by </b>@YasirPediaChannel",
+            caption=f"`{fn}` [{size}]\n\n<b>Creative by </b>TelMovID",
             title=title,
             performer=artist,
             duration=duration,
             progress=progress_func,
-            progress_args=("**Uploading extracted stream...**", msg, c_time))
+            progress_args=("**Mengunggah aliran yang diekstrak...**", msg, c_time))
     except Exception as e:
         print(e)
-        await msg.edit_text("**Some Error Occurred. See Logs for More Info.**")
+        await msg.edit_text("**Terjadi Kesalahan. Lihat Log untuk Informasi Lebih Lanjut.**")
         return
 
     await msg.delete()
@@ -70,10 +70,10 @@ async def upload_audio(client, message, file_loc):
 
 async def upload_subtitle(client, message, file_loc):
 
-    msg = await message.edit_text(text="**Uploading extracted subtitle...**",
+    msg = await message.edit_text(text="**Mengunggah subtitle...**",
                                   reply_markup=InlineKeyboardMarkup([[
                                       InlineKeyboardButton(
-                                          text="Progress",
+                                          text="Progres",
                                           callback_data="progress_msg")
                                   ]]))
 
@@ -83,12 +83,12 @@ async def upload_subtitle(client, message, file_loc):
         await client.send_document(
             chat_id=message.chat.id,
             document=file_loc,
-            caption="<b>Bot by </b>@YasirPediaChannel",
+            caption="<b>Creative by </b>TelMovID",
             progress=progress_func,
-            progress_args=("**Uploading extracted subtitle...**", msg, c_time))
+            progress_args=("**Mengunggah teks subtitle yang diekstrak...**", msg, c_time))
     except Exception as e:
         print(e)
-        await msg.edit_text("**Some Error Occurred. See Logs for More Info.**")
+        await msg.edit_text("**Terjadi Kesalahan. Lihat Log untuk Informasi Lebih Lanjut.**")
         return
 
     await msg.delete()
