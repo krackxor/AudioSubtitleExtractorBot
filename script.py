@@ -13,7 +13,7 @@ Kirimkan saya file/link video/audio apapun dan ekstrak apa yang Anda inginkan :)
 
 Lihat <i>bantuan</i> untuk lebih jelasnya.
 
-© @Killowan</b>"""
+© @ItsTrueOk</b>"""
 
     HELP_MSG = """<b>Hai, Ikuti langkah-langkah ini..</b>
 
@@ -29,7 +29,7 @@ Lihat <i>bantuan</i> untuk lebih jelasnya.
 
     ABOUT_MSG = """⭕️<b>Nama Saya : Bot Pemangkas dan Pengambil Aliran</b>
 
-⭕️<b>Pemilik :</b> @Killowan    
+⭕️<b>Pemilik :</b> @ItsTrueOk    
 
 ⭕️<b>Bahasa :</b> <code>Python3</code>
 
